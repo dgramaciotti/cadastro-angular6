@@ -1,0 +1,37 @@
+<div class="cadastro-text">
+  <h1>Cadastrar pessoa</h1>
+  <p>Cadastre as informações de uma pessoa aqui para salvar na lista de pessoas</p>
+</div>
+
+<form class="inputs" [formGroup]="form" (ngSubmit)="formSubmit()">
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input name="nome" formControlName="nome" id="nome" matInput type="text" placeholder="Ex. Joao da Silva"/>
+    <mat-error *ngIf="!f.nome.valid">
+      Nome deve possuir no mínimo 3 caracteres
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Login</mat-label>
+    <input  formControlName="login" id="login" matInput type="text" placeholder="Ex. joao123"/>
+    <mat-error *ngIf="!f.login.valid">
+      O login deve ter no mínimo 3 caracteres
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input  formControlName="senha" id="senha" matInput type="text" placeholder="Ex. j52698iju"/>
+    <mat-error *ngIf="!f.senha.valid">
+      Deve possuir 8 caracteres ou mais
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>E-mail</mat-label>
+    <input formControlName="email" matInput type="text" placeholder="Ex. joao@gmail.com"/>
+    <mat-error *ngIf="!f.email.valid">
+      Deve estar no formato de email Ex. xxxx@xxxx.com
+    </mat-error>
+  </mat-form-field>
+  <mat-checkbox  formControlName="status">Ativo</mat-checkbox>
+  <button type="submit" color="primary" mat-button>SUBMIT</button>
+</form>

@@ -1,0 +1,8 @@
+.toolbar-links{
+  display:flex;
+}
+.toolbar-links a{
+  text-decoration: none;
+  color: white;
+  margin-left: 1.5rem;
+}

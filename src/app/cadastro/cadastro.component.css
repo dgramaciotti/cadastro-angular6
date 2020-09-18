@@ -1,0 +1,11 @@
+.inputs{
+  display:flex;
+  flex-direction: column;
+  padding:2rem;
+}
+.cadastro-text{
+  padding:2rem;
+}
+mat-form-field, button{
+  max-width: 300px;
+}
